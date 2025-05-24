@@ -1,2 +1,2 @@
 #!/bin/sh
-podman push sebgad/nextcloud-fpm-alpine-updated
+podman push sebgad/nextcloud-fpm-alpine-updated docker.io
