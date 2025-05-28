@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 TARGET_FILES=("build.sh" "push.sh" "check.sh")
 
@@ -9,7 +9,9 @@ for dir in */ ; do
             if [ -x "$FILE_PATH" ]; then
                 echo "Executing $FILE_PATH"
                 echo
+                cd $dir
                 "$FILE_PATH"
+                cd ..
                 if [ $? -ne 0 ]; then
                     echo "Error: $FILE_PATH failed. Skipping to next directory."
                     break  # Stop checking other target files in this directory
