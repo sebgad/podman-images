@@ -10,7 +10,7 @@ for dir in */ ; do
                 echo "Executing $FILE_PATH"
                 echo
                 cd $dir
-                "$file"
+                bash "$file"
                 cd ..
                 if [ $? -ne 0 ]; then
                     echo "Error: $FILE_PATH failed. Skipping to next directory."
