@@ -2,6 +2,9 @@
 
 TARGET_FILES=("build.sh" "push.sh" "check.sh")
 
+# Prune all images before build
+podman image prune -f -a
+
 for dir in */ ; do
     if [ -d "$dir" ]; then
         for file in "${TARGET_FILES[@]}"; do
