@@ -1,4 +1,4 @@
-FROM docker.io/library/nextcloud:production-fpm-alpine
+FROM docker.io/library/nextcloud:fpm-alpine
 
 RUN set -ex; \
     apk update; \
