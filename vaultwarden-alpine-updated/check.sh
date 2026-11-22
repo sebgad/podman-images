@@ -1,2 +1,2 @@
 #!/bin/sh
-podman run --rm docker.io/aquasec/trivy:latest image docker.io/sebgad/vaultwarden-alpine-updated:latest
+exec ../scan-image.sh docker.io/sebgad/vaultwarden-alpine-updated:latest
